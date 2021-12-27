@@ -14,6 +14,7 @@
 		CB1D3D4C2779C47D007089DB /* swift_location_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB1D3D4A2779C47D007089DB /* swift_location_sample.xcdatamodeld */; };
 		CB1D3D4E2779C47E007089DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1D3D4D2779C47E007089DB /* Assets.xcassets */; };
 		CB1D3D512779C47E007089DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1D3D4F2779C47E007089DB /* LaunchScreen.storyboard */; };
+		CB1D3D592779C7DD007089DB /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D3D582779C7DD007089DB /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CB1D3D4D2779C47E007089DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1D3D502779C47E007089DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB1D3D522779C47E007089DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB1D3D582779C7DD007089DB /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CB1D3D4F2779C47E007089DB /* LaunchScreen.storyboard */,
 				CB1D3D522779C47E007089DB /* Info.plist */,
 				CB1D3D4A2779C47D007089DB /* swift_location_sample.xcdatamodeld */,
+				CB1D3D582779C7DD007089DB /* LocationService.swift */,
 			);
 			path = "swift-location-sample";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				CB1D3D4C2779C47D007089DB /* swift_location_sample.xcdatamodeld in Sources */,
 				CB1D3D462779C47D007089DB /* ViewController.swift in Sources */,
+				CB1D3D592779C7DD007089DB /* LocationService.swift in Sources */,
 				CB1D3D422779C47D007089DB /* AppDelegate.swift in Sources */,
 				CB1D3D442779C47D007089DB /* SceneDelegate.swift in Sources */,
 			);
@@ -295,6 +299,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-location-sample/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 접근을 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 접근을 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,6 +328,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-location-sample/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 접근을 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 접근을 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
