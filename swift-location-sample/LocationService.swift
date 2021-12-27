@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import NotificationCenter
 
 class LocationService: NSObject {
     static let shared = LocationService()
@@ -17,6 +18,29 @@ class LocationService: NSObject {
     }
     
     var locationManager: CLLocationManager!
+}
+
+extension LocationService {
+    func fireNotification(_ title: String = "Background Test", body: String) {
+        let notificationCenter = UNUserNotificationCenter.current()
+        
+        notificationCenter.getNotificationSettings { (settings) in
+            if settings.alertSetting == .enabled {
+                let content = UNMutableNotificationContent()
+                content.title = title
+                content.body = body
+                
+                let uuidString = UUID().uuidString
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                let request = UNNotificationRequest(identifier: "Test-\(uuidString)", content: content, trigger: trigger)
+                notificationCenter.add(request, withCompletionHandler: { (error) in
+                    if error != nil {
+                        // Handle the error
+                    }
+                })
+            }
+        }
+    }
 }
 
 extension LocationService {
@@ -55,9 +79,9 @@ extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         switch state {
         case .inside:
-            print("들어왔습니다.")
+            fireNotification("Inside", body: "들어왔습니다.")
         case .outside:
-            print("나왔습니다.")
+            fireNotification("Outside", body: "나왔습니다.")
         case .unknown: break
             // do not something
         }
