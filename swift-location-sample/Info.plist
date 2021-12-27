@@ -25,11 +25,5 @@
 	<array>
 		<string>location</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>위치 접근을 위해 권한이 필요합니다.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>위치 접근을 위해 권한이 필요합니다.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>위치 접근을 위해 권한이 필요합니다.</string>
 </dict>
 </plist>
